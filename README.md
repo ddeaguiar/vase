@@ -116,6 +116,15 @@ For small changes and doc updates, no CA is required.
 If you're proposing a significant change, please open an Issue to
 discuss the design of the change before submitting a Pull Request.
 
+## Support
+
+Don't hesitate to reach out if you run into issues or have questions!
+The Vase community can be found in the
+the [pedestal-users](https://groups.google.com/d/forum/pedestal-users)
+mailing list or
+the [#pedestal](https://clojurians.slack.com/messages/pedestal/) slack
+channel.
+
 ## Copyright
 
 Copyright 2015-2017 Cognitect, Inc. All rights reserved.
