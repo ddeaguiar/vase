@@ -69,8 +69,8 @@ Datomic is a database of [facts](http://docs.datomic.com/query.html#database-of-
 help you get up to speed with it.
 
 The Datomic docs [site](http://docs.datomic.com/index.html) has in-depth resources covering [schema](http://docs.datomic.com/schema.html),
-[query](http://docs.datomic.com/query.html) and [transactions](http://docs.datomic.com/transactions.html)
-and more. These are good resources to dive into as you move to more advanced usages of Vase.
+[query](http://docs.datomic.com/query.html), [transactions](http://docs.datomic.com/transactions.html)
+and more. These are good resources to dive into as you move to more advanced Vase usage scenarios.
 
 ## Getting Started
 
