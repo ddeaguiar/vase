@@ -56,6 +56,13 @@ wire requests to one or more Pedestal [interceptors](http://pedestal.io/referenc
 which handle request/response processing. As you'll find out later, Pedestal interceptors
 are a crucial part of Vase so it is helpful to understand what they are and how they work.
 
+As you dive into more advanced Vase usage scenarios, you'll benefit from a deeper understanding of Pedestal.
+Here's where you should look for more information:
+
+- [Pedestal Docs](http://pedestal.io): The Pedestal docs site is a good launching point.
+- [Pedestal Samples](http://pedestal.io/samples/index): A collection of samples demonstrating Pedestal's capabilities.
+- [Pedestal Repository](https://github.com/pedestal/pedestal): For those who like to dig into the source.
+
 ### Datomic
 
 Datomic is a database of [facts](http://docs.datomic.com/query.html#database-of-facts) and Vase uses it as its backend store. You will immediately be confronted by three Datomic concepts as you work with Vase: schema, query and transaction. Of the three, Datomic queries offer the most variety and, possibly, confusion. Datomic uses a declarative query language called Datomic Datalog for queries. [Learn Datalog Today](http://www.learndatalogtoday.org/) will
