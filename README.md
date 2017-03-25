@@ -41,6 +41,29 @@ Stable versions are currently deployed to the Clojars repository.
 </dependency>
 ```
 
+## Before you get started
+
+Vase is built on top of [Pedestal](http://pedestal.io/)
+and [Datomic](http://www.datomic.com/). While you don't need to be a
+Pedestal or Datomic expert to use Vase, a little introductory material
+goes a long way. Newcomers to either will find these resources especially helpful.
+
+### Pedestal
+
+[Pedestal](http://pedestal.io/index#what-is-pedestal) is a collection
+of libraries for building services and applications. Pedestal routes
+wire requests to one or more Pedestal [interceptors](http://pedestal.io/reference/interceptors)
+which handle request/response processing. As you'll find out later, Pedestal interceptors
+are a crucial part of Vase so it is helpful to understand what they are and how they work.
+
+### Datomic
+
+Datomic is a database of [facts](http://docs.datomic.com/query.html#database-of-facts) and Vase uses it as its backend store. You will immediately be confronted by three Datomic concepts as you work with Vase: schema, query and transaction. Of the three, Datomic queries offer the most variety and, possibly, confusion. Datomic uses a declarative query language called Datomic Datalog for queries. [Learn Datalog Today](http://www.learndatalogtoday.org/) will
+help you get up to speed with it.
+
+The Datomic docs [site](http://docs.datomic.com/index.html) has in-depth resources covering [schema](http://docs.datomic.com/schema.html),
+[query](http://docs.datomic.com/query.html) and [transactions](http://docs.datomic.com/transactions.html)
+and more. These are good resources to dive into as you move to more advanced usages of Vase.
 
 ## Getting Started
 
