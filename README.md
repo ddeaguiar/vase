@@ -71,7 +71,7 @@ implemented as an interceptor. When a matching route is found for a
 given request, the interceptor(s) it relates to are enqueued on the
 interceptor chain.
 
-Pedestal ships with support for the for Jetty, Tomcat and Immutant
+Pedestal ships with support for the Jetty, Tomcat and Immutant
 platforms. Although these are all servlet-based platforms, interceptor
 providers can be implemented for other platforms.
 
