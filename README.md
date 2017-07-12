@@ -51,13 +51,38 @@ goes a long way. Newcomers to either will find these resources especially helpfu
 ### Pedestal
 
 [Pedestal](http://pedestal.io/index#what-is-pedestal) is a collection
-of libraries for building services and applications. Pedestal routes
-wire requests to one or more Pedestal [interceptors](http://pedestal.io/reference/interceptors)
-which handle request/response processing. As you'll find out later, Pedestal interceptors
-are a crucial part of Vase so it is helpful to understand what they are and how they work.
+of libraries for building services and applications. The core
+components of Pedestal
+are [Interceptors](http://pedestal.io/reference/interceptors),
+the [Context Map](http://pedestal.io/reference/context-map) and the
+[Interceptor Chain Provider](http://pedestal.io/reference/chain-providers).
 
-As you dive into more advanced Vase usage scenarios, you'll benefit from a deeper understanding of Pedestal.
-Here's where you should look for more information:
+Interceptors implement functionality and the Context Map controls how
+Pedestal behaves (i.e., when interceptor chain execution terminates,
+going async, etc...). The Interceptor Chain Provider connects the
+interceptor chain to a given platform, creates an initial context and
+executes the interceptor chain against it. Each interceptor has access
+to the context map during execution which means that interceptors can
+_alter_ how Pedestal behaves. What about routes?
+
+Routes are data structures that relate request paths to
+interceptors. After expansion, They are consumed by a Router which is
+implemented as an interceptor. When a matching route is found for a
+given request, the interceptor(s) it relates to are enqueued on the
+interceptor chain.
+
+Pedestal ships with support for the for Jetty, Tomcat and Immutant
+platforms. Although these are all servlet-based platforms, interceptor
+providers can be implemented for other platforms.
+
+It should come as no surprise that
+Pedestal [interceptors](http://pedestal.io/reference/interceptors) are
+a crucial part of Vase so it is helpful to understand what they are
+and how they work.
+
+As you dive into more advanced Vase usage scenarios, you'll benefit
+from a deeper understanding of Pedestal.  Here's where you should look
+for more information:
 
 - [Pedestal Docs](http://pedestal.io): The Pedestal docs site is a good launching point.
 - [Pedestal Samples](http://pedestal.io/samples/index): A collection of samples demonstrating Pedestal's capabilities.
@@ -65,12 +90,24 @@ Here's where you should look for more information:
 
 ### Datomic
 
-Datomic is a database of [facts](http://docs.datomic.com/query.html#database-of-facts) and Vase uses it as its backend store. You will immediately be confronted by three Datomic concepts as you work with Vase: schema, query and transaction. Of the three, Datomic queries offer the most variety and, possibly, confusion. Datomic uses a declarative query language called Datomic Datalog for queries. [Learn Datalog Today](http://www.learndatalogtoday.org/) will
+Datomic is a database
+of [facts](http://docs.datomic.com/query.html#database-of-facts) and
+Vase uses it as its backend store. You will immediately be confronted
+by three Datomic concepts as you work with Vase: schema, query and
+transaction. Of the three, Datomic queries offer the most variety and,
+possibly, confusion. Datomic uses a declarative query language called
+Datomic Datalog for
+queries. [Learn Datalog Today](http://www.learndatalogtoday.org/) will
 help you get up to speed with it.
 
-The Datomic docs [site](http://docs.datomic.com/index.html) has in-depth resources covering [schema](http://docs.datomic.com/schema.html),
-[query](http://docs.datomic.com/query.html), [transactions](http://docs.datomic.com/transactions.html)
-and more. These are good resources to dive into as you move to more advanced Vase usage scenarios.
+The Datomic docs [site](http://docs.datomic.com/index.html) has
+in-depth resources
+covering
+[schema](http://docs.datomic.com/schema.html),
+[query](http://docs.datomic.com/query.html),
+[transactions](http://docs.datomic.com/transactions.html) and
+more. These are good resources to dive into as you move to more
+advanced Vase usage scenarios.
 
 ## Getting Started
 
